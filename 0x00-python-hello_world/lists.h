@@ -1,63 +1,50 @@
-#include <stdio.h>
+#ifndef LISTS_H
+#define LISTS_H
+
 #include <stdlib.h>
 
+/**
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ *
+ * Description: node structure for a singly linked list
+ */
 typedef struct listint_s
 {
     int n;
     struct listint_s *next;
 } listint_t;
 
-int check_cycle(listint_t *list)
-{
-    listint_t *slow = list;
-    listint_t *fast = list;
+/**
+ * print_listint - prints all the elements of a linked list
+ * @h: pointer to the head of the list
+ *
+ * Return: the number of nodes in the list
+ */
+size_t print_listint(const listint_t *h);
 
-    if (!list)
-        return 0;
+/**
+ * add_nodeint - adds a new node at the beginning of a linked list
+ * @head: pointer to the head of the list
+ * @n: integer to be added to the new node
+ *
+ * Return: pointer to the newly added node
+ */
+listint_t *add_nodeint(listint_t **head, const int n);
 
-    while (slow && fast && fast->next)
-    {
-        slow = slow->next;
-        fast = fast->next->next;
+/**
+ * free_listint - frees a linked list
+ * @head: pointer to the head of the list
+ */
+void free_listint(listint_t *head);
 
-        if (slow == fast)
-            return 1;
-    }
+/**
+ * check_cycle - checks if a linked list contains a cycle
+ * @list: pointer to the head of the list
+ *
+ * Return: 1 if the list has a cycle, 0 if it doesn't
+ */
+int check_cycle(listint_t *list);
 
-    return 0;
-}
-
-int main(void)
-{
-    // Create a sample linked list
-    listint_t *head = malloc(sizeof(listint_t));
-    listint_t *second = malloc(sizeof(listint_t));
-    listint_t *third = malloc(sizeof(listint_t));
-
-    head->n = 1;
-    head->next = second;
-
-    second->n = 2;
-    second->next = third;
-
-    third->n = 3;
-    third->next = NULL;
-
-    // Create a cycle in the linked list
-    third->next = second;
-
-    // Check if the linked list contains a cycle
-    int hasCycle = check_cycle(head);
-
-    if (hasCycle)
-        printf("The linked list contains a cycle.\n");
-    else
-        printf("The linked list does not contain a cycle.\n");
-
-    // Free the memory allocated for the linked list
-    free(head);
-    free(second);
-    free(third);
-
-    return 0;
-}
+#endif /* LISTS_H */
