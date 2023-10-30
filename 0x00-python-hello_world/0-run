@@ -1,7 +1,3 @@
 #!/bin/bash
-
-# Set the name of the Python script to be executed
-PYFILE="my_python_is_running.py"
-
 # Execute the Python script using the Python3 interpreter
 python3 $PYFILE
