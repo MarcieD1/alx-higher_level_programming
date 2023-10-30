@@ -1,3 +1,2 @@
 #!/bin/bash
-# Execute the Python script using the Python3 interpreter
 python3 $PYFILE
