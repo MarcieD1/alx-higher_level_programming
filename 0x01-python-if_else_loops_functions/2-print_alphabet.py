@@ -3,5 +3,5 @@
 This prints the ASCII alphabet in lowercase, without a new line.
 """
 
-for i in range(ord('a'), ord('z')+1):
-    print(chr(i), end="")
+for i in range(97, 123):
+    print(chr(i).format(), end="")
