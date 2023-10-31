@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """
 generates a random number & prints information about its last digit.
 """
