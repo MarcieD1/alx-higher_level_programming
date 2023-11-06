@@ -25,5 +25,6 @@ int *divisible_by_2(const int *array, int size);
 int *delete_at_index(int *array, unsigned int size, unsigned int index);
 void switch_integers(int *a, int *b);
 int is_palindrome(listint_t **head);
+listint_t *add_nodeint_end(listint_t **head, const int n);
 
 #endif /* LISTS_H */
