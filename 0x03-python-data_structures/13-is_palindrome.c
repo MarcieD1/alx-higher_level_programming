@@ -9,27 +9,30 @@
  */
 int is_palindrome(listint_t **head)
 {
-    listint_t *head2 = *head;
-	listint_t *aux = NULL, *aux2 = NULL;
-
-	if (*head == NULL || head2->next == NULL)
+	if (head == NULL || *head == NULL)
 		return (1);
-	while (head2 != NULL)
+	return (aux_palind(head, *head));
+}
+
+/**
+ * aux_paulind - checks if a sublist is a palindrome
+ * @head: pointer to the head of the linked list.
+ * @end: pointer to the end of the linked list.
+ * Return: 1 if it is a palindrome, 0 otherwise
+ */
+int aux_palind(listint_t **head, listint_t *end)
+
+{
+	if (end == NULL)
+		return (1);
+
+
+	if (aux_palind(head, end->next) && (*head)->n == end->n)
 	{
-		add_nodeint(&aux, head2->n);
-		head2 = head2->next;
-	}
-	aux2 = aux;
-	while (*head != NULL)
-	{
-		if ((*head)->n != aux2->n)
-		{
-			free_listint(aux);
-			return (0);
-		}
 		*head = (*head)->next;
-		aux2 = aux2->next;
+		return (1);
 	}
-	free_listint(aux);
-	return (1);
+
+
+	return (0);
 }
