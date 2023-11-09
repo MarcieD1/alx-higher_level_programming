@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
 def update_dictionary(a_dictionary, key, value):
-    a_dictionary[key] = value
-    return (a_dictionary)^[[D^[[D^[[C^[[C
+    if key in a_dictionary:
+        a_dictionary[key] = repr(a_dictionary[key]) + [value]
+    else:
+        a_dictionary[key] = [value]
+    return a_dictionary
