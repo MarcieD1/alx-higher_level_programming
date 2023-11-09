@@ -7,4 +7,4 @@ def multiply_by_2(a_dictionary):
     for i in list_keys:
         new_dir[i] *= 2
 
-    retrun (new_dir)
+    return (new_dir)
