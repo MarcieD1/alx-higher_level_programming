@@ -1,0 +1,29 @@
+# Test Cases for print_square function
+
+# Test case 1
+Input: 3
+Expected Output:
+###
+###
+###
+
+# Test case 2
+Input: 5
+Expected Output:
+#####
+#####
+#####
+#####
+#####
+
+# Test case 3
+Input: 0
+Expected Output: (no output)
+
+# Test case 4
+Input: -2
+Expected Output: ValueError: size must be >= 0
+
+# Test case 5
+Input: 2.5
+Expected Output: TypeError: size must be an integer
