@@ -1,0 +1,17 @@
+# Test Cases for say_my_name function
+
+# Test case 1
+Input: "John", "Doe"
+Expected Output: My name is John Doe
+
+# Test case 2
+Input: "Alice"
+Expected Output: My name is Alice
+
+# Test case 3
+Input: 123, "Smith"
+Expected Output: TypeError: first_name must be a string
+
+# Test case 4
+Input: "Jane", 456
+Expected Output: TypeError: last_name must be a string
