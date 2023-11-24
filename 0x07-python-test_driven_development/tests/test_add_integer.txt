@@ -1,0 +1,13 @@
+# Test Cases for add_integer function
+
+# Test case 1
+Input: 1, 2
+Expected Output: 3
+
+# Test case 2
+Input: 1.5, 2.5
+Expected Output: 3
+
+# Test case 3
+Input: "a", "b"
+Expected Output: TypeError
