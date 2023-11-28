@@ -1,0 +1,17 @@
+E
+======================================================================
+ERROR: 6-max_integer_test (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: 6-max_integer_test
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/unittest/loader.py", line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File "/home/mdes2019/alx-higher_level_programming/0x07-python-test_driven_development/tests/6-max_integer_test.py", line 5, in <module>
+    from max_integer import max_integer
+ModuleNotFoundError: No module named 'max_integer'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
