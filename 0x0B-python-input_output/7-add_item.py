@@ -3,6 +3,7 @@
 import sys
 import json
 
+
 def load_from_json_file(filename):
     """Creates an object from a JSON file.
 
@@ -17,6 +18,7 @@ def load_from_json_file(filename):
             return json.load(file)
     except (FileNotFoundError, json.JSONDecodeError):
         return []
+
 
 if __name__ == "__main__":
     save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
