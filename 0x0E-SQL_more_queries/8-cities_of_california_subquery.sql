@@ -1,7 +1,5 @@
-SELECT cities.id, cities.name
-FROM cities
-WHERE state_id IN (
-  SELECT id
-  FROM states
-  WHERE name = "California"
-);
+-- List all cities of California from hbtn_0d_usa
+SELECT cities.name
+FROM cities, states
+WHERE cities.state_id = states.id AND states.name = 'California'
+ORDER BY cities.id ASC;
