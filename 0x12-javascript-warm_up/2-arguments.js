@@ -4,13 +4,17 @@
 const numArgs = process.argv.length - 2;
 
 // Check the number of arguments
+// eslint-disable-next-line no-console
 if (numArgs === 0) {
   // No arguments passed
-  console.log("No argument");
+  // eslint-disable-next-line no-console
+  console.log('No argument');
 } else if (numArgs === 1) {
   // Only one argument passed
-  console.log("Argument found");
+  // eslint-disable-next-line no-console
+  console.log('Argument found');
 } else {
   // More than one argument passed
-  console.log("Arguments found");
+  // eslint-disable-next-line no-console
+  console.log('Arguments found');
 }
